@@ -304,7 +304,7 @@ function get_instance_of($name, $method='', $args=array()) {
  * @return void
   +----------------------------------------------------------
  */
-function __autoload($name) {
+function spl_autoload_register($name) {
     // 检查是否存在别名定义
     if (alias_import($name))
         return;
